@@ -1,33 +1,18 @@
-{% set version = "2017.1.23" %}
+{% set version = "2017.01.19" %}
 
 package:
   name: ca-certificates
   version: {{ version }}
 
-# This does not have a source because it pulls these from certifi at present.
-
-build:
-  number: 0
-  skip: true  # [not py35]
-  # As openssl includes these (dependency of Python), they will be removed afterwards.
-  # This is our way of ensuring these files are kept anyways. Once conda-forge has its
-  # own openssl, this will no longer be necessary.
-  #
-  # Note: The Windows copy of openssl does not include these.
-  always_include_files:
-    - ssl/cert.pem                # [unix]
-    - ssl/cacert.pem              # [unix]
-    - Library/ssl/cert.pem        # [win]
-    - Library/ssl/cacert.pem      # [win]
+source:
+  url: http://anduin.linuxfromscratch.org/BLFS/other/make-ca.sh-{{ version | replace(".","") }}
+  sha256: 8e35348f5f96108116a92f5c5755991c7da66e30bddcb4112dc3ddda851c6b2a
 
 requirements:
   build:
-    - python
-    - certifi {{ version }}
+    - posix  # [win]
 
-test:
-  requires:
-    - curl
+build:
 
   commands:
     # Verify the certificates are there.
@@ -37,8 +22,10 @@ test:
     - if not exist %LIBRARY_PREFIX%\\ssl\\cert.pem exit 1                     # [win]
 
     # Use the certificates to download something.
-    - curl --cacert "${PREFIX}/ssl/cacert.pem" https://www.google.com         # [unix]
-    - curl --cacert %LIBRARY_PREFIX%\\ssl\\cacert.pem https://www.google.com  # [win]
+    - /usr/bin/openssl -CAfile "${PREFIX}/ssl/cacert.pem" -CApath nosuchdir s_client -showcerts -connect www.google.com:443  # [unix]
+
+    - /usr/bin/curl --cacert "${PREFIX}/ssl/cacert.pem" https://www.google.com         # [unix]
+    - /usr/bin/curl --cacert %LIBRARY_PREFIX%\\ssl\\cacert.pem https://www.google.com  # [win]
 
 about:
   home: https://github.com/conda-forge/ca-certificates-feedstock
