@@ -1,4 +1,4 @@
-{% set version = "2017.01.19" %}
+{% set version = "2017.05.14" %}
 
 package:
   name: ca-certificates
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://anduin.linuxfromscratch.org/BLFS/other/make-ca.sh-{{ version | replace(".","") }}
-  sha256: 8e35348f5f96108116a92f5c5755991c7da66e30bddcb4112dc3ddda851c6b2a
+  sha256: c882ab8b5a67389fc556852bd44081d8b376e8bf44cd4c7afcbdac8e940a69c3
 
 requirements:
   build:
