@@ -7,6 +7,8 @@ package:
 source:
   url: http://anduin.linuxfromscratch.org/BLFS/other/make-ca.sh-{{ version | replace(".","") }}
   sha256: c882ab8b5a67389fc556852bd44081d8b376e8bf44cd4c7afcbdac8e940a69c3
+  patches:
+    - 0001-Add-macOS-mktemp-compatibility.patch
 
 requirements:
   build:
