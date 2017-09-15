@@ -12,10 +12,10 @@ source:
 
 requirements:
   build:
-    - posix  # [win]
+    - posix       # [win]
+    - m2-openssl  # [win]
 
 build:
-
   commands:
     # Verify the certificates are there.
     - test -f "${PREFIX}/ssl/cacert.pem"                                      # [unix]
