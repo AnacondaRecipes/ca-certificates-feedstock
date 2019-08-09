@@ -11,6 +11,7 @@ source:
   sha256: cb2eca3fbfa232c9e3874e3852d43b33589f27face98eef10242a853d83a437a
 
 build:
+  number: 1
   commands:
     # Verify the certificates are there.
     - test -f "${PREFIX}/ssl/cacert.pem"                                      # [unix]
@@ -26,7 +27,8 @@ build:
 
 about:
   home: https://github.com/conda-forge/ca-certificates-feedstock
-  license: ISC
+  license: MPL 2.0
+  license_file: LICENSE.txt
   summary: Certificates for use with other packages.
 
 extra:
