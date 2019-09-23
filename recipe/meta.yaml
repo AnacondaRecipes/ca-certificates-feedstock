@@ -1,4 +1,4 @@
-{% set version = "2019.5.15" %}
+{% set version = "2019.8.28" %}
 
 package:
   name: ca-certificates
@@ -7,11 +7,11 @@ package:
 source:
   # updates and sha256 published at: https://curl.haxx.se/docs/caextract.html
   fn: cacert.pem
-  url: https://curl.haxx.se/ca/cacert-2019-05-15.pem
-  sha256: cb2eca3fbfa232c9e3874e3852d43b33589f27face98eef10242a853d83a437a
+  url: https://curl.haxx.se/ca/cacert-2019-08-28.pem
+  sha256: 38b6230aa4bee062cd34ee0ff6da173250899642b1937fc130896290b6bd91e3
 
 build:
-  number: 1
+  number: 0
   commands:
     # Verify the certificates are there.
     - test -f "${PREFIX}/ssl/cacert.pem"                                      # [unix]
