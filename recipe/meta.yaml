@@ -1,4 +1,4 @@
-{% set version = "2019.11.27" %}
+{% set version = "2020.1.1" %}
 
 package:
   name: ca-certificates
@@ -7,8 +7,8 @@ package:
 source:
   # updates and sha256 published at: https://curl.haxx.se/docs/caextract.html
   fn: cacert.pem
-  url: https://curl.haxx.se/ca/cacert-2019-11-27.pem
-  sha256: 0d98a1a961aab523c9dc547e315e1d79e887dea575426ff03567e455fc0b66b4
+  url: https://curl.haxx.se/ca/cacert-2020-01-01.pem
+  sha256: adf770dfd574a0d6026bfaa270cb6879b063957177a991d453ff1d302c02081f
 
 build:
   number: 0
