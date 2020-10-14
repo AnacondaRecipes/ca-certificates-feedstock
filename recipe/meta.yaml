@@ -1,4 +1,4 @@
-{% set version = "2020.7.22" %}
+{% set version = "2020.10.14" %}
 
 package:
   name: ca-certificates
