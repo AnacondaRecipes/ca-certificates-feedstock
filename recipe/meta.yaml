@@ -1,4 +1,7 @@
 {% set version = "2021.1.19" %}
+{% set sha256sum = "e010c0c071a2c79a76aa3c289dc7e4ac4ed38492bfda06d766a80b707ebd2f29" %}
+
+{% set reldate = "{:d}-{:02d}-{:02d}".format(*(version.split(".") | map("int"))) %}
 
 package:
   name: ca-certificates
@@ -7,11 +10,11 @@ package:
 source:
   # updates and sha256 published at: https://curl.haxx.se/docs/caextract.html
   fn: cacert.pem
-  url: https://curl.haxx.se/ca/cacert-2020-07-22.pem
-  sha256: 2782f0f8e89c786f40240fc1916677be660fb8d8e25dede50c9f6f7b0c2c2178
+  url: https://curl.haxx.se/ca/cacert-{{ reldate }}.pem
+  sha256: {{ sha256sum }}
 
 build:
-  number: 0
+  number: 1
   commands:
     # Verify the certificates are there.
     - test -f "${PREFIX}/ssl/cacert.pem"                                      # [unix]
