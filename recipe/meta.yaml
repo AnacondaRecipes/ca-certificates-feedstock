@@ -1,5 +1,5 @@
-{% set version = "2021.9.30" %}
-{% set sha256sum = "f524fc21859b776e18df01a87880efa198112214e13494275dbcbd9bcb71d976" %}
+{% set version = "2021.10.26" %}
+{% set sha256sum = "ae31ecb3c6e9ff3154cb7a55f017090448f88482f0e94ac927c0c67a1f33b9cf" %}
 
 {% set reldate = "{:d}-{:02d}-{:02d}".format(*(version.split(".") | map("int"))) %}
 
