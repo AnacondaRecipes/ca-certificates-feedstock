@@ -14,14 +14,14 @@ exists() {
 for i in ssl/{cacert,cert}.pem ; do
 	exists $i
 done
-user_cert(){
-exit_status=$1
-if [ $exit_status -eq 0 ]; then
-  echo "Able to use ca certificate"
-else
-  echo "Failed to use ca cert files"
-  exit 1
-fi
+user_cert() {
+  exit_status=$1
+  if [ "$exit_status" -eq 0 ]; then
+    echo "Able to use ca certificate"
+  else
+    echo "Failed to use ca cert files"
+    exit 1
+  fi
 }
 #openssl -CAfile "${PREFIX}/ssl/cacert.pem" -CApath nosuchdir s_client -showcerts -connect www.google.com:443
 openssl s_client -CAfile "${PREFIX}/ssl/cacert.pem" -showcerts -connect www.google.com:443
