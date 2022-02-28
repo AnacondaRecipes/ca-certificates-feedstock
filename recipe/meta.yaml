@@ -27,6 +27,7 @@ about:
   license: MPL-2.0
   license_file: LICENSE.txt
   summary: Certificates for use with other packages.
+  doc_url: https://github.com/curl/curl/blob/master/docs/SSLCERTS.md
 
 extra:
   recipe-maintainers:
