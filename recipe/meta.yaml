@@ -1,5 +1,5 @@
-{% set version = "2022.2.1" %}
-{% set sha256sum = "1d9195b76d2ea25c2b5ae9bee52d05075244d78fcd9c58ee0b6fac47d395a5eb" %}
+{% set version = "2022.3.18" %}
+{% set sha256sum = "2d0575e481482551a6a4f9152e7d2ab4bafaeaee5f2606edb829c2fdb3713336" %}
 
 {% set reldate = "{:d}-{:02d}-{:02d}".format(*(version.split(".") | map("int"))) %}
 
