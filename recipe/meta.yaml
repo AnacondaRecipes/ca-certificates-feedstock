@@ -14,11 +14,12 @@ source:
   sha256: {{ sha256sum }}
 
 build:
-  number: 0
+  number: 1
 
 test:
   requires:
     - pip
+    - curl
   commands:
     - pip check
 
