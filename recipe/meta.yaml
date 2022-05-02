@@ -30,6 +30,7 @@ about:
   license_family: Other
   summary: Certificates for use with other packages.
   doc_url: https://github.com/curl/curl/blob/master/docs/SSLCERTS.md
+  dev_url: https://curl.se/docs/caextract.html # updates and sha256
 
 extra:
   recipe-maintainers:
