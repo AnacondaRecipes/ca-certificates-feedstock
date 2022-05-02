@@ -1,5 +1,5 @@
-{% set version = "2022.3.29" %}
-{% set sha256sum = "1979e7fe618c51ed1c9df43bba92f977a0d3fe7497ffa2a5e80dfc559a1e5a29" %}
+{% set version = "2022.4.26" %}
+{% set sha256sum = "08df40e8f528ed283b0e480ba4bcdbfdd2fdcf695a7ada1668243072d80f8b6f" %}
 
 {% set reldate = "{:d}-{:02d}-{:02d}".format(*(version.split(".") | map("int"))) %}
 
@@ -14,7 +14,7 @@ source:
   sha256: {{ sha256sum }}
 
 build:
-  number: 1
+  number: 0
 
 test:
   requires:
@@ -24,9 +24,10 @@ test:
     - pip check
 
 about:
-  home: https://github.com/conda-forge/ca-certificates-feedstock
+  home: https://curl.se/docs/caextract.html
   license: MPL-2.0
   license_file: LICENSE.txt
+  license_family: Other
   summary: Certificates for use with other packages.
   doc_url: https://github.com/curl/curl/blob/master/docs/SSLCERTS.md
 
