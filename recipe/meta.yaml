@@ -30,7 +30,9 @@ about:
   license_family: Other
   summary: Certificates for use with other packages.
   doc_url: https://github.com/curl/curl/blob/master/docs/SSLCERTS.md
-  dev_url: https://curl.se/docs/caextract.html # updates and sha256
+  dev_url: https://github.com/curl/curl/blob/master/scripts/mk-ca-bundle.pl
+  # mk-ca-bundle converts certdata.txt to cacert.pem
+  # https://hg.mozilla.org/releases/mozilla-release/raw-file/default/security/nss/lib/ckfw/builtins/certdata.txt
 
 extra:
   recipe-maintainers:
