@@ -41,3 +41,7 @@ extra:
      - patricksnape
      - pelson
      - scopatz
+  skip-lints:
+    - missing_description
+    - missing_license_url
+    - missing_doc_source_url
