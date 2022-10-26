@@ -20,8 +20,6 @@ test:
   requires:
     - pip
     - curl
-  commands:
-    - pip check
 
 about:
   home: https://curl.se/docs/caextract.html
