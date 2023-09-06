@@ -23,8 +23,5 @@ user_cert() {
 		exit 1
 	fi
 }
-#openssl -CAfile "${PREFIX}/ssl/cacert.pem" -CApath nosuchdir s_client -showcerts -connect www.google.com:443
-openssl s_client -CAfile "${PREFIX}/ssl/cacert.pem" -showcerts -connect www.google.com:443
-user_cert $?
 curl --cacert "${PREFIX}/ssl/cacert.pem" https://www.google.com
 user_cert $?
