@@ -44,3 +44,4 @@ extra:
      - scopatz
   skip-lints:
     - missing_description
+    - missing_section
