@@ -14,8 +14,7 @@ source:
   sha256: {{ sha256sum }}
 
 build:
-  number: 1
-  noarch: generic
+  number: 0
 
 test:
   requires:
