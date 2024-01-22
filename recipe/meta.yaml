@@ -13,7 +13,12 @@ source:
   url: https://curl.se/ca/cacert-{{ reldate }}.pem
   sha256: {{ sha256sum }}
 
+
 build:
+
+  # only build on linux-64 b/c it is noarch
+  skip: true # [aarch64 or s390x or ppc64le or arm64 or win or osx]
+  python: noarch
   number: 0
 
 test:
