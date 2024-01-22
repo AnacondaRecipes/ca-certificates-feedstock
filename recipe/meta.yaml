@@ -15,6 +15,10 @@ source:
 
 build:
   number: 0
+  noarch: generic
+  
+  # noarch only needs to build on linux64
+  skip: true # [not linux64]
 
 test:
   requires:
