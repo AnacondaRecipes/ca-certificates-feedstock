@@ -1,5 +1,5 @@
-{% set version = "2024.3.11" %}
-{% set sha256sum = "1794c1d4f7055b7d02c2170337b61b48a2ef6c90d77e95444fd2596f4cac609f" %}
+{% set version = "2024.7.2" %}
+{% set sha256sum = "1bf458412568e134a4514f5e170a328d11091e071c7110955c9884ed87972ac9" %}
 
 {% set reldate = "{:d}-{:02d}-{:02d}".format(*(version.split(".") | map("int"))) %}
 
@@ -26,6 +26,7 @@ about:
   license_file: LICENSE.txt
   license_family: Other
   summary: Certificates for use with other packages.
+  description: Certificates for use with other packages.
   doc_url: https://github.com/curl/curl/blob/master/docs/SSLCERTS.md
   dev_url: https://github.com/curl/curl/blob/master/scripts/mk-ca-bundle.pl
   # mk-ca-bundle converts certdata.txt to cacert.pem
@@ -33,13 +34,11 @@ about:
 
 extra:
   recipe-maintainers:
-     - jakirkham
-     - jjhelmus
-     - msarahan
-     - mwcraig
-     - ocefpaf
-     - patricksnape
-     - pelson
-     - scopatz
-  skip-lints:
-    - missing_description
+    - jakirkham
+    - jjhelmus
+    - msarahan
+    - mwcraig
+    - ocefpaf
+    - patricksnape
+    - pelson
+    - scopatz
