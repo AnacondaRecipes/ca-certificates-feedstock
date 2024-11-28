@@ -1,5 +1,5 @@
-{% set version = "2024.9.24" %}
-{% set sha256sum = "189d3cf6d103185fba06d76c1af915263c6d42225481a1759e853b33ac857540" %}
+{% set version = "2024.11.26" %}
+{% set sha256sum = "bb1782d281fe60d4a2dcf41bc229abe3e46c280212597d4abcc25bddf667739b" %}
 
 {% set reldate = "{:d}-{:02d}-{:02d}".format(*(version.split(".") | map("int"))) %}
 
@@ -19,6 +19,7 @@ build:
 test:
   requires:
     - curl
+  # test commands are in run_test.{sh,bat} files.
 
 about:
   home: https://curl.se/docs/caextract.html
