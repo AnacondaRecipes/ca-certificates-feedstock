@@ -16,10 +16,6 @@ source:
 build:
   number: 0
 
-requirements:
-  # an empty build section because there is no requirements
-  build:
-
 test:
   requires:
     - curl
