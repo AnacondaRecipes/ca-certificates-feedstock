@@ -43,3 +43,5 @@ extra:
     - patricksnape
     - pelson
     - scopatz
+  skip-lints:
+    - missing_section
