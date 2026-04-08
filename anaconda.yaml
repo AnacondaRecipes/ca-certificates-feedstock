@@ -2,4 +2,4 @@ anaconda_config_version: 1
 upstream_sources:
   - webpage:
       url: https://curl.haxx.se/docs/caextract.html
-      regex: (?:.*)cacert-(\d+)-(\d+)-(\d+)\.pem
+      regex: (?:.*)cacert-([\d-]+)\.pem
