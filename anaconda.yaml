@@ -3,3 +3,5 @@ upstream_sources:
   - webpage:
       url: https://curl.se/docs/caextract.html
       regex: (?:.*)cacert-([\d-]+)\.pem
+      from_pattern: ^(\d{4})-0*(\d+)-0*(\d+)$
+      to_pattern: \1.\2.\3
