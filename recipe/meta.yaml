@@ -1,17 +1,17 @@
-{% set version = "2026.5.14" %}
-{% set sha256sum = "86a1f3366afac7c6f8ae9f3c779ac221129328c43f0ab2b8817eb2f362a5025c" %}
+{% set name = "ca-certificates" %}
+{% set version = "2026.7.16" %}
 
 {% set reldate = "{:d}-{:02d}-{:02d}".format(*(version.split(".") | map("int"))) %}
 
 package:
-  name: ca-certificates
+  name: {{ name }}
   version: {{ version }}
 
 source:
   # updates and sha256 published at: https://curl.haxx.se/docs/caextract.html
   fn: cacert.pem
   url: https://curl.se/ca/cacert-{{ reldate }}.pem
-  sha256: {{ sha256sum }}
+  sha256: 3ff344e30b9b1ed2971044eabb438a08f2e2245ddb5f8ab1a3ad8b63ab4eaf91
 
 build:
   number: 0
